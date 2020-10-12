@@ -1,0 +1,113 @@
+<!-- INFORMAÇÕES SOBRE O PROJETO
+    HTML
+        Hipertext Markup Language
+
+    PROJECT: Happy Web - NLW
+-->
+
+<!-- SOBRE AS TAGS
+    • Estrutura das Tags: 
+        <nome [atributos]> corpo </nome> 
+    • Estrutura dos Atributos:
+        nome-do-atributo="valor"
+
+    • Tipos de Atributos:
+        - Atributo global:  existe para qualquer tag;
+        - Atributo local:   existe apenas em uma tag específica.
+
+    • Aninhamento de Tags: 
+        o ato de inserir uma tag sobre a outra,
+        ou seja, colocá-la dentro do corpo da outra.
+-->
+
+<!DOCTYPE html>
+<html lang="pt_BR"> 
+
+    <!-- A Tag <head>:
+        Contém as configurações específicas da página
+    -->
+    <head>
+        <meta charset="UTF-8">
+
+        <!-- O Metadado "viewport" - Layout Responsivo:
+            Adapta o layout de acordo com um determinado tamanho 
+            e escala. Geralmente as configurações são as seguintes:
+                width="device-width",
+                initial-scale=1.0
+        -->
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0"
+        >
+
+        <title>Happy Web - Localize um lar adotivo perto de você</title>
+
+
+        <!-- LINKS 
+            A tag que associal um documento a este.
+
+            • Tipos Comuns:
+                | DESCRIÇÃO        | REL VALUE    |
+                | Ícone da página  | "icon"       |
+                | CSS Document     | "stylesheet" |
+
+            • Atributos:
+                - Relacionamento (rel):
+                    o tipo de relação entre o documento a ser 
+                    associado e este;
+                - Endereço (href):
+                    o endereço absoluto ou relativo do documento a ser
+                    associado (o diretório "./ é o diretório raiz").
+        -->
+        <link rel="icon" href="./public/images/logo-icon.png">
+        <link rel="stylesheet" href="./public/css/main.css">
+    </head>
+
+    <!-- A Tag <body>:
+            Conterá a estrutura visual da página
+    -->
+    <body>
+        <header>
+
+            <!--Logomarca-->
+            <img 
+                src="./public/images/logo.svg" 
+                alt=
+                    "Logomarca da página &quot;Happy&quot;,
+                    contendo o seu nome."
+            >
+
+            <!--Endereço-->
+            <div class="endereco-atual">
+
+                <!-- A Tag '<strong>':
+                    Marca um texto de grau importante e o formata para
+                    negrito. 
+                -->
+                <strong id="cidade" class="endereco-atual">
+                    Vale do S. Francisco
+                </strong>
+
+                <p id="UF" class="endereco-atual">Pernambuco</p>
+            </div>
+
+        </header>
+
+        <main>
+            <h1>Leve felicidade para o mundo</h1>
+            
+            <section>
+                <p>
+                    Visite orfanatos e mude o dia de muitas crianças.
+                </p>
+
+                <a href="#" title="Localize o orfanato mais próximo">
+                    <img src="./public/images/arrow.svg" 
+                    alt="Ir para o mapa de orfanatos">
+                </a>
+            </section>
+
+
+        </main>
+    </body>
+</html>
