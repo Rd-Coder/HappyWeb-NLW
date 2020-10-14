@@ -1,0 +1,154 @@
+/* Informações Gerais sobre o CSS (Cascading Style Sheet)
+
+    • SINTAXE DO CSS:
+        ▸ Estrutura Sintática dos Elementos:
+            '''
+                seletor1, seletor2, ..., seletorx {
+                    [corpo ...]
+                    propriedade: valor1 valor2 valorx;
+                    [...]
+                }
+
+                #id { 
+                    [...] 
+                }
+
+                .classe { 
+                    [...] 
+                }
+
+                -> Seleciona um elemento dentro de determinada classe:
+                .classe subseletor { }
+
+                tag { 
+                    [...] 
+                }
+
+                -> Seleciona tudo:
+                * {
+                    [...]
+
+                -> Elemento Raiz (<html>):
+                :root {
+                    [...]
+                }
+            '''
+            
+            -> Definindo o Estilo a Partir do HTML:
+                - Definição por Tag:
+                    '''
+                        <style>
+                            [sintaxe-css ...]
+                        </style>
+                    '''
+
+                - Como um Atributo:
+                    '''
+                        <tag style="propriedade1: valor1; [...]; 
+                        propriedadex: valorx;></tag>
+                    '''
+            
+            -> Sobre as Propriedades:
+                • Classificação das Propriedades:
+                    1. Superpropriedade (Short Hand):
+                        Uma propriedade que agrupa várias outras. 
+                        Geralmente são de palavra única. Ex:
+                            '''
+                            background: prop1 prop2 propx
+                            '''
+                    2. Subpropriedade:
+                        Uma propriedade especifica de uma superpropriedade.
+                        Geralmente são de palavras compostas. Ex:
+                            '''
+                            superpropriedade-subpropriedade: valor
+                            '''
+    ---
+
+    • TIPOS DE VALORES:
+            - Named (nomes) | texto   | ex. color: red
+            - Functions     | funções | ex. color: rgb(0, 100, 255)
+            - Numeric       | números | ex. width: 100
+    ---
+
+    • UNIDADES DE MEDIDA:
+            |       DESCRIÇÃO       |   SÍMBOLO   |
+            | Graus                 | deg         | 
+            | Viewport Height       | vh          | - para tamanho
+            | Viewport Width        | vw          | - para tamanho
+            | Relative to Father    | em          | - para fontes
+            | Relative to Main      | rem         | - para fontes
+    ---
+
+    • FUNCIONAMENTO:
+        - Cascata:
+            O estilo é aplicado em camadas, ou seja, um elemento é
+            mais importante, em termos de renderização, do que o
+            seu antecessor.
+        - Especificidade:
+            Um estilo se sobressai a outro a depender de onde foi
+            declarado. Esse grau de relevância, em ordem decrescente,
+            obedece à seguinte ordem:
+                1º. No atributo 'style' de uma tag;
+                2º. Dentro do escopo '<head>':
+                    - Na tag '<style>', se declarado depois de links de
+                    stylesheets;
+                    - Referenciado na tag '<link'>, se declarado depois
+                    das tags '<style>';
+                3º. Em um documento CSS separado:
+                    - 1º. Quando o seletor referencia um ID (#id);
+                    - 2º. Quando o seletor referencia uma classe (.classe);
+                    - 3º. Quando o seletor referencia uma tag (tag);
+
+            OBS: Uma tag também sobressai a outra, de acordo com
+            a posição em que foi declarada.
+    ---
+        
+*/
+
+
+* {
+    margin: 0; /* Margem */
+    padding: 0; /* Preenchimento */
+}
+
+:root {
+    font-size: 62.5%;
+}
+
+body {
+    height: 100vh;
+    color: white;
+}
+
+body, input, button, textarea {
+    /* Valores: font-weight font-size/line-height font-family */
+    font: 400 1.8rem/1 'Nunito', sans-serif;
+}
+
+#page-landing {
+
+    min-height: 100vh;
+    text-align: center;
+
+    /* Propriedade 'background'
+        Uma superpropriedade que define o fundo de um elemento.
+        Seus valores são:
+            background: color repeat
+
+        ▸ Função 'linear-gradient()':
+            Atribui um gradiente de cor linear.
+            - Argumentos:
+                ([grau-de-inclinacao]deg, [cor1] [percent1]%, [...],
+                [corx] [percentx]%);
+
+        ▸ Subpropriedade 'no-repeat':
+            Impede o preenchimento repetitivo do fundo.
+    */
+    background: 
+        linear-gradient(329.54deg, #29b6d1 0%, #00c7c7 100%) 
+        no-repeat;
+}
+
+.location, h1, .visit p {
+    height: 16vh;
+}
