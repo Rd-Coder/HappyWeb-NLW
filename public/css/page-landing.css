@@ -1,0 +1,63 @@
+
+#page-landing {
+
+    min-height: 100vh;
+    text-align: center;
+    
+    display: flex;
+    
+    /* Propriedade 'background'
+        Uma superpropriedade que define o fundo de um elemento.
+        Seus valores são:
+            background: color repeat
+
+        ▸ Função 'linear-gradient()':
+            Atribui um gradiente de cor linear.
+            - Argumentos:
+                ([grau-de-inclinacao]deg, [cor1] [percent1]%, [...],
+                [corx] [percentx]%);
+
+        ▸ Subpropriedade 'no-repeat':
+            Impede o preenchimento repetitivo do fundo.
+    */
+    background: 
+        linear-gradient(329.54deg, #29b6d1 0%, #00c7c7 100%) 
+        no-repeat;
+}
+
+#container {
+    margin: auto;
+    width: 90%;
+}
+
+.location, h1, .visit p {
+    height: 16vh;
+}
+
+.visit a {
+
+    /* Tamanho */
+    width: 8rem;
+    height: 8rem;
+    background: #ffd666;
+
+    /* Borda */
+    border: none;
+    border-radius: 3rem;
+
+    /* Margem */
+    margin: auto;
+
+    /* Alinhamento */
+    display: flex;
+    align-items: center; /* alinha em relação ao eixo horizontal */
+    justify-content: center; /* alinha em relação ao eixo vertical */
+
+
+    /* Transições */
+    transition: background 200ms;
+}
+
+.visit a:hover {
+    background: #96feff
+}

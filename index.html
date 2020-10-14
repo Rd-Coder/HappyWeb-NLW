@@ -3,11 +3,13 @@
         Hipertext Markup Language
 
     PROJECT: Happy Web - NLW
+    INITIAL DATE: 12/10/2020
 -->
 
 <!-- SOBRE AS TAGS
     • Estrutura das Tags: 
-        <nome [atributos]> corpo </nome> 
+        <nome [atributos]> conteúdo </nome> 
+
     • Estrutura dos Atributos:
         nome-do-atributo="valor"
 
@@ -17,7 +19,7 @@
 
     • Aninhamento de Tags: 
         o ato de inserir uma tag sobre a outra,
-        ou seja, colocá-la dentro do corpo da outra.
+        ou seja, colocá-la dentro do conteúdo da outra.
 -->
 
 <!DOCTYPE html>
@@ -44,7 +46,7 @@
 
 
         <!-- LINKS 
-            A tag que associal um documento a este.
+            A tag que associa um documento a este.
 
             • Tipos Comuns:
                 | DESCRIÇÃO        | REL VALUE    |
@@ -59,55 +61,81 @@
                     o endereço absoluto ou relativo do documento a ser
                     associado (o diretório "./ é o diretório raiz").
         -->
+
+        <!--Ícone-->
         <link rel="icon" href="./public/images/logo-icon.png">
+
+        <!--Estilização-->
         <link rel="stylesheet" href="./public/css/main.css">
+        <link rel="stylesheet" href="./public/css/page-landing.css">
+        <link rel="stylesheet" href="./public/css/animations.css">
+
+        <link 
+            rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,400;0,600;1,800&display=swap" 
+        >
     </head>
 
     <!-- A Tag <body>:
             Conterá a estrutura visual da página
     -->
     <body>
-        <header>
+        <div id="page-landing">
+            <div id="container">
+                <header>
 
-            <!--Logomarca-->
-            <img 
-                src="./public/images/logo.svg" 
-                alt=
-                    "Logomarca da página &quot;Happy&quot;,
-                    contendo o seu nome."
-            >
+                    <!--Logomarca-->
+                    <img 
+                        id="logo"
+                        class="animate-up"
+                        src="./public/images/logo.svg" 
+                        alt=
+                            "Logomarca da página &quot;Happy&quot;,
+                            contendo o seu nome."
+                    />
+        
+                    <!--Endereço-->
+                    <div class="location animate-up">
+        
+                        <!-- A Tag '<strong>':
+                            Marca um texto de grau importante e o 
+                            formata para negrito. 
+                        -->
+                        <strong id="cidade" class="endereco-atual">
+                            Vale do S. Francisco
+                        </strong>
 
-            <!--Endereço-->
-            <div class="endereco-atual">
-
-                <!-- A Tag '<strong>':
-                    Marca um texto de grau importante e o formata para
-                    negrito. 
-                -->
-                <strong id="cidade" class="endereco-atual">
-                    Vale do S. Francisco
-                </strong>
-
-                <p id="UF" class="endereco-atual">Pernambuco</p>
+                        <p id="UF" class="endereco-atual">Pernambuco</p>
+                    </div>
+        
+                </header>
+        
+                <main>
+                    <h1 class="animate-up">Leve felicidade para o mundo</h1>
+                    
+                    <section class="visit">
+                        <p class="animate-up">
+                            Visite orfanatos e mude o dia de muitas crianças.
+                        </p>
+        
+                        <!-- O atributo 'title':
+                            Define o texto a ser exibido quando o mouse para
+                            sobre o elemento.
+                        -->
+                        <a class="animate-up"
+                            href="#" 
+                            title="Localize o orfanato mais próximo"
+                        >
+                            <img 
+                                src="./public/images/arrow.svg" 
+                                alt="Ir para o mapa de orfanatos"
+                            />
+                        </a>
+                    </section>
+        
+        
+                </main>
             </div>
-
-        </header>
-
-        <main>
-            <h1>Leve felicidade para o mundo</h1>
-            
-            <section>
-                <p>
-                    Visite orfanatos e mude o dia de muitas crianças.
-                </p>
-
-                <a href="#" title="Localize o orfanato mais próximo">
-                    <img src="./public/images/arrow.svg" 
-                    alt="Ir para o mapa de orfanatos">
-                </a>
-            </section>
-
-
-        </main>
+        </div>
     </body>
 </html>

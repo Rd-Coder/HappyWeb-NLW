@@ -32,6 +32,9 @@
                 :root {
                     [...]
                 }
+
+                -> Eventos:
+                [seletor]:[evento] { }
             '''
             
             -> Definindo o Estilo a Partir do HTML:
@@ -76,7 +79,7 @@
             | Viewport Height       | vh          | - para tamanho
             | Viewport Width        | vw          | - para tamanho
             | Relative to Father    | em          | - para fontes
-            | Relative to Main      | rem         | - para fontes
+            | Relative to Root      | rem         | - para fontes
     ---
 
     • FUNCIONAMENTO:
@@ -105,50 +108,47 @@
         
 */
 
+:root {
+    font-size: 62.5%; /* 0.625 x 16px = 10px */
+}
 
 * {
     margin: 0; /* Margem */
     padding: 0; /* Preenchimento */
 }
 
-:root {
-    font-size: 62.5%;
-}
-
 body {
     height: 100vh;
     color: white;
+    height: 100%;
 }
 
 body, input, button, textarea {
+    
     /* Valores: font-weight font-size/line-height font-family */
-    font: 400 1.8rem/1 'Nunito', sans-serif;
+    font: 800 1.8rem/1 'Nunito', sans-serif;
+
 }
 
-#page-landing {
-
-    min-height: 100vh;
-    text-align: center;
-
-    /* Propriedade 'background'
-        Uma superpropriedade que define o fundo de um elemento.
-        Seus valores são:
-            background: color repeat
-
-        ▸ Função 'linear-gradient()':
-            Atribui um gradiente de cor linear.
-            - Argumentos:
-                ([grau-de-inclinacao]deg, [cor1] [percent1]%, [...],
-                [corx] [percentx]%);
-
-        ▸ Subpropriedade 'no-repeat':
-            Impede o preenchimento repetitivo do fundo.
-    */
-    background: 
-        linear-gradient(329.54deg, #29b6d1 0%, #00c7c7 100%) 
-        no-repeat;
+#logo {
+    animation-delay: 50ms;
 }
 
-.location, h1, .visit p {
-    height: 16vh;
+.location {
+    animation-delay: 100ms;
 }
+
+main h1 {
+    animation-delay: 150ms;
+}
+
+main p {
+    animation-delay: 200ms;
+}
+
+.visit a {
+    animation-delay: 250ms;
+}
+
+
+
