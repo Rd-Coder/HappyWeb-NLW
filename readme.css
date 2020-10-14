@@ -1,0 +1,83 @@
+:root {
+    /* Texto */
+    font-size: 62.5%;
+}
+
+
+/* MATRIX */
+
+/* - Tags */
+body {
+    /* Layout */
+    display: flex;
+    min-width: 595px;
+    vertical-align: center;
+    margin: auto;
+
+    background: linear-gradient(329.54deg, #29b6d1 0%, #00c7c7 100%)
+    no-repeat;
+
+    /* Texto */
+    font-family: "Nunito", sans-serif;
+}
+
+h1 {
+    font-size: 1.8rem;
+}
+
+
+/* - Classes */
+h1, p {
+    text-align: center;
+}
+
+
+/* HEADER */
+
+header {
+    /* Layout */
+    display: flex;
+    margin: 0 auto;
+
+    width: 595px;
+    height: 131px;
+
+    /* Backgroud */
+    background-color: #C4C4C4;
+    border-radius: 0 0 15px 15px;
+}
+
+header #title-and-sub {
+
+    vertical-align: center;
+    justify-content: center;
+    margin: auto;
+
+    width: 402px;
+    height: 87.5px;
+}
+
+#title-and-sub #title {
+    position: relative;
+    width: 402px;
+    height: 41px;
+    margin-bottom: 0;
+    font-size: 30px;
+
+}
+
+#title-and-sub #subtitle {
+    margin: auto;
+    margin-top: 9.5px;
+
+    width: 268px;
+    height: 37px;
+
+    font-size: 12px;
+}
+
+#main {
+    display: flex;
+
+}
+
