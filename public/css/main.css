@@ -76,10 +76,10 @@
     • UNIDADES DE MEDIDA:
             |       DESCRIÇÃO       |   SÍMBOLO   |
             | Graus                 | deg         | 
-            | Viewport Height       | vh          | - para tamanho
-            | Viewport Width        | vw          | - para tamanho
-            | Relative to Father    | em          | - para fontes
-            | Relative to Root      | rem         | - para fontes
+            | Viewport Height       | vh          | - Y vw = Y x root-height / 100
+            | Viewport Width        | vw          | - Y vw = Y x root-width / 100
+            | Relative to Father    | em          | - Y em = Y x father-value
+            | Relative to Root      | rem         | - Y rem = Y x root-value
     ---
 
     • FUNCIONAMENTO:
@@ -108,6 +108,8 @@
         
 */
 
+
+/* GERAL */
 :root {
     font-size: 62.5%; /* 0.625 x 16px = 10px */
 }
@@ -117,6 +119,8 @@
     padding: 0; /* Preenchimento */
 }
 
+
+/* CORPO */
 body {
     height: 100vh;
     color: white;
@@ -130,6 +134,8 @@ body, input, button, textarea {
 
 }
 
+
+/* CABEÇALHO */
 #logo {
     animation-delay: 50ms;
 }
@@ -138,6 +144,10 @@ body, input, button, textarea {
     animation-delay: 100ms;
 }
 
+
+/* PRINCIPAL */
+
+/* Textos */
 main h1 {
     animation-delay: 150ms;
 }
@@ -146,6 +156,8 @@ main p {
     animation-delay: 200ms;
 }
 
+
+/* Botão */
 .visit a {
     animation-delay: 250ms;
 }

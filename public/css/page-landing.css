@@ -27,7 +27,15 @@
 
 #container {
     margin: auto;
-    width: 90%;
+
+    /* Função 'min(...)':
+        Retorna o menor valor da sequência de argumentos. No caso,
+        se (90% x viewport-width < 112rem), então width será 90%.
+        Caso contrário, a função retornará o segundo valor e, portanto,
+        width corresponderá a 112rem.
+    */
+    width: min(90%, 112rem);
+
 }
 
 .location, h1, .visit p {
@@ -36,16 +44,13 @@
 
 .visit a {
 
-    /* Tamanho */
+    /* Layout */
     width: 8rem;
     height: 8rem;
-    background: #ffd666;
 
-    /* Borda */
     border: none;
     border-radius: 3rem;
 
-    /* Margem */
     margin: auto;
 
     /* Alinhamento */
@@ -53,11 +58,107 @@
     align-items: center; /* alinha em relação ao eixo horizontal */
     justify-content: center; /* alinha em relação ao eixo vertical */
 
+    /* Background */
+    background: #ffd666;
 
     /* Transições */
     transition: background 200ms;
 }
 
+
+/* EVENTOS */
+
 .visit a:hover {
-    background: #96feff
+    background: #96feff;
+}
+
+
+/* VERSIONAMENTO */
+ 
+/* Versão Desktop */
+@media (min-width: 760px) {
+
+    /* Cabeçalho */
+    header {
+        display: flex;
+
+        /* disponíveis apenas quando display é 'flex' ou 'grid': */
+        align-items: center; 
+        justify-content: space-between;
+    }
+
+    #container {
+        padding: 5rem 2rem; /*padding: top-and-bottom left-and-right*/
+
+        /* Função URL:
+            Importa o conteúdo de alguma URL.
+            '.' = root, ".." = /public, "., = /css
+        */
+        background: 
+            url("../images/bg.svg")         /*src*/
+            no-repeat                       /*distribution*/
+            80%                             /*position*/
+            / clamp(30rem, 54vw, 56rem);    /*size*/
+        
+    }
+
+
+    /* Textos do Page Landing */
+    .location, h1, .visit p {
+
+        /* Valor 'initial': 
+            Redefine uma propriedade para o padrão. 
+        */
+
+        height: initial;
+        text-align: initial;
+    }
+
+    .location {
+        text-align: right;
+        font-size: 2.4rem;
+        line-height: 3.4rem;
+    }
+
+
+    /* Textos do Page Landing */
+    main h1 {
+
+        /* Layout */
+        width: min(300px, 80%);
+        margin: clamp(10%, 9vh, 12%) 0 4rem;
+
+        /* Texto */
+            /* Função 'clamp(min, ideal-value, max)':
+
+                Se (min < ideal-value < max), retorna 'ideal-value';
+                Se não, se (ideal-value < min), retorna 'min';
+                Se não, retorna 'max'.
+
+                OBS: clamp == grampo
+            */
+        font-size: clamp(4rem, 8vw, 8.4rem);
+        font-weight: 800; /* obs: mudança de extrabold para bold */
+        line-height: 0.88; /* 0.88 == 88% */
+    }
+
+    .visit {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+    }
+
+    .visit p {
+        line-height: 1.5;
+        width: clamp(20rem, 20vw, 30rem);
+
+        font-size: 2.4rem;
+        font-weight: 600; /* 600 == bold */
+    }
+
+    .visit a {
+        margin: initial;
+    }
+
 }
