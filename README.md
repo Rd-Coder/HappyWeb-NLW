@@ -18,7 +18,7 @@
             <h2 style="font-weight: bold; font-size: 16px">• Andamento do Projeto</h2>
             <section id="workshop1" class="releases subtopic" style="subtopic: 15px">
                 <h3 style="font-weight: bold">▸ Workshop #01:</h3>
-                <div id="capture" style="width: 50rem; height: 28.125rem; background: url('./public/images/captures/workshop-01_gif_result.gif') no-repeat 0%; background-size: clamp(30rem, 80vw, 45rem);"></div>
+                <img src="./public/images/captures/workshop-01_gif_result.gif" width="700px">
             </section>
         </section>
     </main>
